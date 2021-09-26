@@ -1,0 +1,33 @@
+{
+  "name": "objectsfilter",
+  "version": "1.0.0",
+  "description": "Basically it's like 'Array.prototype.filter' but more of an 'Object.filter'",
+  "main": "build/index.js",
+  "types": "build",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "object",
+    "objects",
+    "objectsfilter",
+    "objectfilters",
+    "object's filter",
+    "array",
+    "arrays",
+    "filter",
+    "filters",
+    "condition",
+    "conditional",
+    "conditional filter",
+    "filter on condition",
+    "filter object with condition",
+    "filter objects with condition",
+    "filter objects based on condition"
+  ],
+  "author": "M. Jouhar B.",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
