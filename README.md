@@ -104,15 +104,21 @@ const catsObject = {
   Jack: false,
 };
 
-objectsForEach(catsObject, () => {}
-  console.log(`${cat} says Meow`);
-})
+objectsForEach(catsObject, (catValue, catName) => {
+  if (catValue) {
+    console.log(`${catName} says Meow`);
+  } else {
+    console.log(`${catName} isn't here today`);
+  }
+});
 
 // Oliver says Meow
 // Leo says Meow
-// Charlie says Meow
+// Milo isn't here today
+// Charlie isn't here today
 // Simba says Meow
 // Max says Meow
+// Jack isn't here today
 ```
 
 you get the idea, Or you can go real wild with it...
