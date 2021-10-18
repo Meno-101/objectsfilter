@@ -8,9 +8,36 @@ Basically it's just like `Array.prototype.filter` but more of `Object.filter`.
 npm i objectsfilter
 ```
 
-Simplest ever usage:
+## Syntax:
+
+### objectsFilter:
+
+It's an Objects filter, let you filter objects on certain conditions with a flexibility.
+
+```
+const result = objectsFilter(object, callback);
+```
+
+#### Arguments:
+
+- `object`
+  - Any object that you may think of.
+- `callback`
+  - a testing function to test whether a certain condition is true or false, it has four parameters.
+    - `currentItem` each looped value in the passed object
+    - `currentKey` each looped key in the passed object
+    - `resultObject` the collected result till the current time of the object
+    - `originObject` the original object as passed
+
+#### Returns:
+
+- a new object with the filtered results, or empty object if none-found.
+
+usage:
 
 ```ts
+const { objectsFilter } = require('objectsfilter');
+
 const catsObject = {
   Oliver: 'Meow',
   Leo: 'Meow',
@@ -22,7 +49,7 @@ const catsObject = {
 };
 
 function checkCatsAvailability(cats) {
-  return objectFilter(cats, cat => !!cat);
+  return objectsFilter(cats, cat => !!cat);
 }
 
 const cats = checkCatsAvailability(catsObject);
@@ -41,11 +68,58 @@ availableSaysMeow();
 // Max says Meow
 ```
 
+### objectsForEach:
+
+It's an Objects forEach method, let you loop through objects on certain with ease, you don't have to worry about `forin` any more.
+
+```
+objectsForEach(object, callback);
+```
+
+#### Arguments:
+
+- `object`
+  - Any object that you may think of.
+- `callback`
+  - `currentItem` each looped value in the passed object
+  - `currentKey` each looped key in the passed object
+  - `originObject` the original object as passed
+
+#### Returns:
+
+- void.
+
+usage:
+
+```ts
+const { objectsForEach } = require('objectsfilter');
+
+const catsObject = {
+  Oliver: 'Meow',
+  Leo: 'Meow',
+  Milo: '',
+  Charlie: undefined,
+  Simba: 'Meow',
+  Max: 'Meow',
+  Jack: false,
+};
+
+objectsForEach(catsObject, () => {}
+  console.log(`${cat} says Meow`);
+})
+
+// Oliver says Meow
+// Leo says Meow
+// Charlie says Meow
+// Simba says Meow
+// Max says Meow
+```
+
 you get the idea, Or you can go real wild with it...
 
-Made for easy objects filtering.
+Made for easy objects filtering or looping.
 
-For some strange reason you may need this, but most likely you won't.
+For some strange reason you may need this, trust me ;)
 
 Easy to use, maintain, and contain some vitamin Cat as well.
 
