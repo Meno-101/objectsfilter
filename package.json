@@ -1,6 +1,6 @@
 {
   "name": "objectsfilter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basically it's like 'Array.prototype.filter' but more of an 'Object.filter'",
   "main": "build/index.js",
   "types": "build",
@@ -29,5 +29,13 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "typescript": "^4.4.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meno-101/objectsfilter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Meno-101/objectsfilter/issues"
+  },
+  "homepage": "https://github.com/Meno-101/objectsfilter#readme"
 }
