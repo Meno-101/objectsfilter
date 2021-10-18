@@ -1,6 +1,6 @@
 {
   "name": "objectsfilter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basically it's like 'Array.prototype.filter' but more of an 'Object.filter'",
   "main": "build/index.js",
   "types": "build",
